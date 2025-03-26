@@ -90,30 +90,35 @@
 <child link="base_link"/>
 <origin xyz="0 0 0.05" rpy="0 0 0"/>
 <axis xyz="0 0 1"/>
+<limit effort="10.0" lower="0" upper="0" velocity="0.5"/>
 </joint>
 <joint name="trunk_joint" type="fixed">
 <parent link="base_link"/>
 <child link="trunk_link"/>
 <origin xyz="0 0 0" rpy="0 0 0"/>
 <axis xyz="0 0 1"/>
+<limit effort="10.0" lower="0" upper="0" velocity="0.5"/>
 </joint>
 <joint name="shoulder_joint" type="revolute">
 <parent link="trunk_link"/>
 <child link="shoulder_link"/>
 <origin xyz="0 0 0.4" rpy="0 0 0"/>
 <axis xyz="0 0 1"/>
+<limit effort="10.0" lower="-3.14" upper="3.14" velocity="0.5"/>
 </joint>
 <joint name="forearm_joint" type="revolute">
 <parent link="shoulder_link"/>
 <child link="forearm_link"/>
 <origin xyz="0.45 0 0.06" rpy="0 0 0"/>
 <axis xyz="0 0 1"/>
+<limit effort="10.0" lower="-2.587" upper="2.587" velocity="0.5"/>
 </joint>
 <joint name="pinza_joint" type="fixed">
 <parent link="forearm_link"/>
 <child link="pinza_link"/>
 <origin xyz="0.45 0 -0.1" rpy="0 0 0"/>
 <axis xyz="0 0 1"/>
+<limit effort="10.0" lower="0" upper="0" velocity="0.5"/>
 </joint>
 <joint name="elevador_joint" type="prismatic">
 <parent link="pinza_link"/>
